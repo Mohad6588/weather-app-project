@@ -20,13 +20,16 @@ if (minutes <= 9) {
 let dayTime = document.querySelector(".day-time");
 dayTime.innerHTML = `${weekdays[currentDay]} ${hour}:${minutes}`;
 
-function searchCity(event) {
-  event.preventDefault();
-  let cityValue = document.querySelector(".city-value").value;
-
+function searchCity(cityValue) {
   let apiKey = `5ef4de8cd6b7fefcd7c42f98cf464ce8`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityValue = document.querySelector(".city-value").value;
+  searchCity(cityValue);
 }
 function showCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -61,7 +64,9 @@ function showTemp(response) {
 }
 
 let submitButton = document.querySelector(".search-box");
-submitButton.addEventListener("submit", searchCity);
+submitButton.addEventListener("submit", handleSubmit);
 
 let currentBtn = document.querySelector("#current-btn");
 currentBtn.addEventListener("click", showCurrentPosition);
+
+searchCity("London");

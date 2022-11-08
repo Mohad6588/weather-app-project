@@ -1,10 +1,4 @@
 body {
-  border: 1px solid #ced4da;
-  border-radius: 0.375rem;
-  margin: 30px auto;
-  max-width: 650px;
-  min-width: 570px;
-  padding: 20px 15px 5px;
   color: #70757a;
   font-size: 13px;
   line-height: 1.6;
@@ -38,7 +32,14 @@ p {
 footer {
   text-align: center;
   margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.4;
 }
+
+a {
+  text-decoration: none;
+}
+
 .unit {
   font-size: 18px;
   display: inline;
@@ -71,13 +72,24 @@ footer {
   background-color: rgb(230 230 230);
   color: #fff;
 }
+
 #current-btn {
   background-color: #686868;
   color: #fff;
 }
+
 #current:hover {
   background-color: rgb(230 230 230);
   color: #fff;
+}
+
+.container {
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  margin: 30px auto 0;
+  max-width: 650px;
+  min-width: 570px;
+  padding: 20px 15px 5px;
 }
 
 .form-control {
