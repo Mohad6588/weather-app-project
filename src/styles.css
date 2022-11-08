@@ -1,0 +1,127 @@
+body {
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  margin: 30px auto;
+  max-width: 650px;
+  min-width: 570px;
+  padding: 20px 15px 5px;
+  color: #70757a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h4 {
+  color: #202124;
+}
+h1 {
+  font-size: 52px;
+  margin-bottom: 12px;
+  display: inline;
+}
+
+h2 {
+  font-size: 34px;
+  margin-top: 15px;
+}
+
+h4 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 5px auto 0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 0;
+}
+.unit {
+  font-size: 18px;
+  display: inline;
+  position: relative;
+  bottom: 20px;
+  left: 0px;
+}
+
+#cel,
+#far {
+  text-decoration: none;
+}
+
+#submit,
+#current-btn {
+  background-color: #fff;
+  font-size: 14px;
+  padding: 6px 10px 4px;
+  color: #70757a;
+  border: 1px solid rgb(230 230 230);
+  line-height: 1.6;
+  position: relative;
+  top: 1px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(230 230 230);
+  transition: all 100ms ease-in-out;
+}
+
+#submit:hover {
+  background-color: rgb(230 230 230);
+  color: #fff;
+}
+#current-btn {
+  background-color: #686868;
+  color: #fff;
+}
+#current:hover {
+  background-color: rgb(230 230 230);
+  color: #fff;
+}
+
+.form-control {
+  display: inline;
+  width: 60%;
+  margin-top: 15px;
+  font-size: 14px;
+  border: 1px solid rgb(230 230 230);
+  box-shadow: 2px 2px 5px rgb(230 230 230);
+}
+
+.today-temperature,
+.current-temperature-icon {
+  text-align: center;
+  margin-left: 0;
+  margin-top: 7px;
+}
+
+.min-max {
+  text-align: center;
+  font-size: 15px;
+  color: #202124;
+  margin-top: 5px;
+}
+
+.col.max-temp {
+  margin-right: 15px;
+}
+
+.weather-index {
+  margin: 15px 0 0 15px;
+  font-size: 13px;
+}
+
+.daily-prediction {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.min-prediction,
+.max-prediction {
+  font-size: 12px;
+}
+
+.max-prediction {
+  color: #202124;
+}
