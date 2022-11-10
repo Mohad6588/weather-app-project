@@ -17,7 +17,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-9">
+        <div class="col-8">
           <form class="search-box">
             <input
               type="text"
@@ -32,40 +32,44 @@
           <div class="city-Description">
             <h2 class="city-name"></h2>
             <h4 class="country-name"></h4>
-            <p class="day-time">Wednesday 04:00</p>
+            <p class="day-time"></p>
             <p class="wheather-description"></p>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-4">
           <div class="row">
-            <div class="col">
+            <div class="col-8">
               <div class="today-temperature">
                 <h1 class="current-temperature"></h1>
                 <span class="unit">°C </span>
-                <div class="min-max">
-                  <div class="row">
-                    <div class="col">
-                      <span id="min-temp">°C</span>
-                    </div>
-                    <div class="col max-temp">
-                      <span id="max-temp">°C</span>
-                    </div>
+              </div>
+              <div class="min-max">
+                <div class="row">
+                  <div class="col">
+                    <span id="min-temp">°C</span>
+                  </div>
+                  <div class="col max-temp">
+                    <span id="max-temp">°C</span>
                   </div>
                 </div>
               </div>
-              <div class="weather-index">
-                <div>
-                  <label for="feels-like">Feels like:</label>
-                  <span id="feels-like">°C</span>
-                </div>
-                <div>
-                  <label for="humidity">Humidity:</label>
-                  <span id="humidity">%</span>
-                </div>
-                <div>
-                  <label for="wind">Wind:</label> <span id="wind"> m/s</span>
-                </div>
-              </div>
+            </div>
+            <div class="col-4">
+              <img id="current-temp-icon" src="#" />
+            </div>
+          </div>
+
+          <div class="weather-index">
+            <div>
+              <label for="feels-like">Feels like:</label>
+              <span id="feels-like">°C</span>
+            </div>
+            <div>
+              <label for="humidity">Humidity:</label>
+              <span id="humidity">%</span>
+            </div>
+            <div>
+              <label for="wind">Wind:</label> <span id="wind"> m/s</span>
             </div>
           </div>
         </div>

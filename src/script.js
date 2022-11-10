@@ -1,24 +1,26 @@
-let current = new Date();
-let currentDay = current.getDay();
-let weekdays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let hour = current.getHours();
-if (hour <= 9) {
-  hour = "0" + hour;
+function formatedDate(time) {
+  let current = new Date(time);
+  let currentDay = current.getDay();
+  let weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let hour = current.getHours();
+  if (hour <= 9) {
+    hour = "0" + hour;
+  }
+  let minutes = current.getMinutes();
+  if (minutes <= 9) {
+    minutes = "0" + minutes;
+  }
+
+  return `${weekdays[currentDay]} ${hour}:${minutes}`;
 }
-let minutes = current.getMinutes();
-if (minutes <= 9) {
-  minutes = "0" + minutes;
-}
-let dayTime = document.querySelector(".day-time");
-dayTime.innerHTML = `${weekdays[currentDay]} ${hour}:${minutes}`;
 
 function searchCity(cityValue) {
   let apiKey = `5ef4de8cd6b7fefcd7c42f98cf464ce8`;
@@ -47,10 +49,17 @@ function showTemp(response) {
   cityName.innerHTML = response.data.name;
   let countryName = document.querySelector(".country-name");
   countryName.innerHTML = response.data.sys.country;
+  let dayTime = document.querySelector(".day-time");
+  dayTime.innerHTML = formatedDate(response.data.dt * 1000);
   let weatherDescription = document.querySelector(".wheather-description");
   weatherDescription.innerHTML = response.data.weather[0].description;
   let cityCurrentTemp = document.querySelector("h1");
   cityCurrentTemp.innerHTML = Math.round(response.data.main.temp);
+  let currentTempIcon = document.querySelector("#current-temp-icon");
+  currentTempIcon.setAttribute(
+    "src",
+    "http://openweathermap.org/img/wn/10d@2x.png"
+  );
   let minTemp = document.querySelector("#min-temp");
   minTemp.innerHTML = `${Math.round(response.data.main.temp_min)} °C`;
   let maxTemp = document.querySelector("#max-temp");

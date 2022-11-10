@@ -1,6 +1,6 @@
 body {
   color: #70757a;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -89,7 +89,7 @@ a {
   margin: 30px auto 0;
   max-width: 650px;
   min-width: 570px;
-  padding: 20px 15px 5px;
+  padding: 20px 15px 15px;
 }
 
 .form-control {
@@ -100,12 +100,20 @@ a {
   border: 1px solid rgb(230 230 230);
   box-shadow: 2px 2px 5px rgb(230 230 230);
 }
+.wheather-description::first-letter {
+  text-transform: capitalize;
+}
 
-.today-temperature,
-.current-temperature-icon {
+.today-temperature {
   text-align: center;
   margin-left: 0;
   margin-top: 7px;
+}
+#current-temp-icon {
+  width: 120px;
+  position: relative;
+  top: -15px;
+  left: -50px;
 }
 
 .min-max {
@@ -120,8 +128,7 @@ a {
 }
 
 .weather-index {
-  margin: 15px 0 0 15px;
-  font-size: 13px;
+  margin: 5px 0 0 15px;
 }
 
 .daily-prediction {
