@@ -104,6 +104,11 @@ a {
   margin-left: 0;
   margin-top: 7px;
 }
+.today-temperature .active {
+  color : #000;
+  cursor:default;
+}
+
 
 .unit {
   font-size: 15px;
