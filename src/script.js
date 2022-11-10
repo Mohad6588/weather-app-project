@@ -53,8 +53,9 @@ function showTemp(response) {
   dayTime.innerHTML = formatedDate(response.data.dt * 1000);
   let weatherDescription = document.querySelector(".wheather-description");
   weatherDescription.innerHTML = response.data.weather[0].description;
-  let cityCurrentTemp = document.querySelector("h1");
-  cityCurrentTemp.innerHTML = Math.round(response.data.main.temp);
+  let cityTemp = document.querySelector("h1");
+  celsiusTemp = response.data.main.temp;
+  cityTemp.innerHTML = Math.round(celsiusTemp);
   let currentTempIcon = document.querySelector("#current-temp-icon");
   currentTempIcon.setAttribute(
     "src",
@@ -72,10 +73,29 @@ function showTemp(response) {
   wind.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
 }
 
+function toFahrenheit(event) {
+  event.preventDefault();
+  let cityTemp = document.querySelector("h1");
+  cityTemp.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
+}
+
+function toCelsius(event) {
+  event.preventDefault();
+  let cityTemp = document.querySelector("h1");
+  cityTemp.innerHTML = Math.round(celsiusTemp);
+}
+
 let submitButton = document.querySelector(".search-box");
 submitButton.addEventListener("submit", handleSubmit);
 
 let currentBtn = document.querySelector("#current-btn");
 currentBtn.addEventListener("click", showCurrentPosition);
+
+let celsiusCityTemp = null;
+
+let celsiusTempLink = document.querySelector("#cel");
+let fahrenheitTempLink = document.querySelector("#far");
+celsiusTempLink.addEventListener("click", toCelsius);
+fahrenheitTempLink.addEventListener("click", toFahrenheit);
 
 searchCity("London");

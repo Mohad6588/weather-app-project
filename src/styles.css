@@ -10,7 +10,7 @@ h4 {
   color: #202124;
 }
 h1 {
-  font-size: 52px;
+  font-size: 60px;
   margin-bottom: 12px;
   display: inline;
 }
@@ -37,19 +37,6 @@ footer {
 }
 
 a {
-  text-decoration: none;
-}
-
-.unit {
-  font-size: 18px;
-  display: inline;
-  position: relative;
-  bottom: 20px;
-  left: 0px;
-}
-
-#cel,
-#far {
   text-decoration: none;
 }
 
@@ -83,6 +70,13 @@ a {
   color: #fff;
 }
 
+#current-temp-icon {
+  width: 100px;
+  position: relative;
+  top: -15px;
+  left: -40px;
+}
+
 .container {
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
@@ -100,6 +94,7 @@ a {
   border: 1px solid rgb(230 230 230);
   box-shadow: 2px 2px 5px rgb(230 230 230);
 }
+
 .wheather-description::first-letter {
   text-transform: capitalize;
 }
@@ -109,18 +104,20 @@ a {
   margin-left: 0;
   margin-top: 7px;
 }
-#current-temp-icon {
-  width: 120px;
+
+.unit {
+  font-size: 15px;
+  display: inline;
   position: relative;
-  top: -15px;
-  left: -50px;
+  bottom: 30px;
+  left: 0px;
 }
 
 .min-max {
   text-align: center;
   font-size: 15px;
   color: #202124;
-  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .col.max-temp {
@@ -129,6 +126,7 @@ a {
 
 .weather-index {
   margin: 5px 0 0 15px;
+  line-height: 1.7;
 }
 
 .daily-prediction {
