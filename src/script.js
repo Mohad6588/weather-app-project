@@ -58,7 +58,7 @@ function showTemp(response) {
   let currentTempIcon = document.querySelector("#current-temp-icon");
   currentTempIcon.setAttribute(
     "src",
-    "http://openweathermap.org/img/wn/10d@2x.png"
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   let minTemp = document.querySelector("#min-temp");
   minTemp.innerHTML = `${Math.round(response.data.main.temp_min)} °C`;
