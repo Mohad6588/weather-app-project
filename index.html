@@ -15,69 +15,67 @@
     <title>Weather app</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <form class="search-box">
-            <input
-              type="text"
-              class="form-control city-value"
-              placeholder="Enter a city name"
-              required
-              autocomplete="off"
-            />
-            <input type="submit" value="Search" id="submit" />
-            <input type="button" value="Current location" id="current-btn" />
-          </form>
-          <div class="city-Description">
-            <h2 class="city-name"></h2>
-            <h4 class="country-name"></h4>
-            <p class="day-time"></p>
-            <p class="wheather-description"></p>
+    <div id="weather-app">
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <form class="search-box">
+              <input
+                type="text"
+                class="form-control city-value"
+                placeholder="Enter a city name"
+                required
+                autocomplete="off"
+              />
+              <input type="submit" value="Search" id="submit" />
+              <input type="button" value="Current location" id="current-btn" />
+            </form>
+            <div class="city-Description">
+              <h2 class="city-name"></h2>
+              <h4 class="country-name"></h4>
+              <p class="day-time"></p>
+              <p class="wheather-description"></p>
+            </div>
           </div>
-        </div>
-        <div class="col-4">
-          <div class="row">
-            <div class="col-8">
-              <div class="today-temperature">
-                <h1 class="current-temperature"></h1>
-                <span class="unit"
-                  ><a href="#" id="cel" class="active">°C </a>|
-                  <a href="#" id="far">°F</a>
-                </span>
+          <div class="col-4">
+            <div class="row">
+              <div class="col-8">
+                <div class="today-temperature">
+                  <h1 class="current-temperature"></h1>
+                  <span class="unit">°C </span>
+                </div>
+              </div>
+              <div class="col-4">
+                <img id="current-temp-icon" src="#" />
               </div>
             </div>
-            <div class="col-4">
-              <img id="current-temp-icon" src="#" />
-            </div>
-          </div>
 
-          <div class="weather-index">
-            <div>
-              <label for="feels-like">Feels like:</label>
-              <span id="feels-like">°C</span>
-            </div>
-            <div>
-              <label for="humidity">Humidity:</label>
-              <span id="humidity">%</span>
-            </div>
-            <div>
-              <label for="wind">Wind:</label> <span id="wind"> m/s</span>
+            <div class="weather-index">
+              <div>
+                <label for="feels-like">Feels like:</label>
+                <span id="feels-like">°C</span>
+              </div>
+              <div>
+                <label for="humidity">Humidity:</label>
+                <span id="humidity">%</span>
+              </div>
+              <div>
+                <label for="wind">Wind:</label> <span id="wind"> m/s</span>
+              </div>
             </div>
           </div>
         </div>
+        <div id="forecast"></div>
       </div>
-      <div id="forecast">   
-      </div>
+      <footer>
+        <small>
+          <a href="https://github.com/Mohad6588/weather-app-project"
+            >Open-source code</a
+          >
+          by Mohadeseh Moradian <br />
+        </small>
+      </footer>
     </div>
-    <footer>
-      <small>
-        <a href="https://github.com/Mohad6588/weather-app-project"
-          >Open-source code</a
-        >
-        by Mohadeseh Moradian <br />
-      </small>
-    </footer>
     <script src="src/script.js"></script>
   </body>
 </html>

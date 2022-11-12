@@ -118,21 +118,9 @@ function showTemp(response) {
   getCoordinate(response.data.coordinates);
 }
 
-function toFahrenheit(event) {
-  event.preventDefault();
-  fahrenheitTempLink.classList.add("active");
-  celsiusTempLink.classList.remove("active");
-  let cityTemp = document.querySelector("h1");
-  cityTemp.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
-}
 
-function toCelsius(event) {
-  event.preventDefault();
-  celsiusTempLink.classList.add("active");
-  fahrenheitTempLink.classList.remove("active");
-  let cityTemp = document.querySelector("h1");
-  cityTemp.innerHTML = Math.round(celsiusTemp);
-}
+
+
 
 let submitButton = document.querySelector(".search-box");
 submitButton.addEventListener("submit", handleSubmit);
@@ -140,11 +128,6 @@ submitButton.addEventListener("submit", handleSubmit);
 let currentBtn = document.querySelector("#current-btn");
 currentBtn.addEventListener("click", showCurrentPosition);
 
-let celsiusCityTemp = null;
 
-let celsiusTempLink = document.querySelector("#cel");
-let fahrenheitTempLink = document.querySelector("#far");
-celsiusTempLink.addEventListener("click", toCelsius);
-fahrenheitTempLink.addEventListener("click", toFahrenheit);
 
-searchCity("London");
+searchCity("paris");
