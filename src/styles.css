@@ -77,6 +77,10 @@ a {
   left: -40px;
 }
 
+#forecast{
+  margin-top: 20px;;
+}
+
 .container {
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
@@ -104,6 +108,7 @@ a {
   margin-left: 0;
   margin-top: 7px;
 }
+
 .today-temperature .active {
   color : #000;
   cursor:default;
@@ -118,46 +123,25 @@ a {
   left: 0px;
 }
 
-.min-max {
-  text-align: center;
-  font-size: 15px;
-  color: #202124;
-  margin-bottom: 10px;
-}
-
-.col.max-temp {
-  margin-right: 15px;
-}
-
 .weather-index {
   margin: 5px 0 0 15px;
   line-height: 1.7;
 }
 
-.daily-prediction {
-  text-align: center;
-  margin-top: 20px;
+.forecast-icon {
+  position: relative;
+  top : -10px;
 }
 
-.min-prediction,
-.max-prediction {
-  font-size: 12px;
-}
-
-.max-prediction {
-  color: #202124;
-}
-
-.forecast{
-  margin-top: 20px;;
-}
 
 .forecast-date {
   text-align: center;
+  padding: 0;
 }
 
 .forecast-max-min {
   font-size: 13px;
+  margin-top: -15px;
 }
 
 .forecast-max {
