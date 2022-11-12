@@ -61,7 +61,7 @@ a {
 }
 
 #current-btn {
-  background-color: #686868;
+  background-color: #7a7979;
   color: #fff;
 }
 
@@ -88,7 +88,7 @@ a {
 
 .form-control {
   display: inline;
-  width: 60%;
+  width: 50%;
   margin-top: 15px;
   font-size: 14px;
   border: 1px solid rgb(230 230 230);
@@ -146,4 +146,21 @@ a {
 
 .max-prediction {
   color: #202124;
+}
+
+.forecast{
+  margin-top: 20px;;
+}
+
+.forecast-date {
+  text-align: center;
+}
+
+.forecast-max-min {
+  font-size: 13px;
+}
+
+.forecast-max {
+  color: #000;
+  margin-left: 10px;;
 }

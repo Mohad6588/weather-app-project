@@ -33,6 +33,29 @@ function handleSubmit(event) {
   let cityValue = document.querySelector(".city-value").value;
   searchCity(cityValue);
 }
+
+
+
+function displayforecast() {
+  let forecastDays = ["Sun", "Mon", "Thu", "Wed", "Thu", "Fri", "Sat"];
+  let forecastElement = document.querySelector(".forecast");
+  forecastDays.forEach((day) => {
+    forecastElement.innerHTML =
+      forecastElement.innerHTML +
+      `<div class="forecast-date col">
+          <div class="day">${day}</div>
+          <img src="http://openweathermap.org/img/wn/01d@2x.png" width="50px" alt="">
+          <div class="forecast-max-min">
+            <span class="forecast-min">12</span><span class="forecast-max">19</span>
+          </div>
+        </div>`;
+  });
+
+  // getCoordinate();
+}
+
+displayforecast();
+
 function showCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
   function showPosition(position) {
@@ -71,6 +94,8 @@ function showTemp(response) {
   humidity.innerHTML = `${Math.round(response.data.main.humidity)}%`;
   let wind = document.querySelector("#wind");
   wind.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
+
+  // getCoordinate(response.data.dt * 1000);
 }
 
 function toFahrenheit(event) {
@@ -83,8 +108,8 @@ function toFahrenheit(event) {
 
 function toCelsius(event) {
   event.preventDefault();
-    celsiusTempLink.classList.add("active");
-    fahrenheitTempLink.classList.remove("active");
+  celsiusTempLink.classList.add("active");
+  fahrenheitTempLink.classList.remove("active");
   let cityTemp = document.querySelector("h1");
   cityTemp.innerHTML = Math.round(celsiusTemp);
 }
