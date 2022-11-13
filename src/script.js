@@ -44,7 +44,7 @@ function getCoordinate(coordinate) {
 }
 
 function forecastFormatDay(timestamp) {
-  let forecastdate = new Date(timestamp*1000);
+  let forecastdate = new Date(timestamp * 1000);
   let forecastDay = forecastdate.getDay();
   let forecastWeekDay = ["Sun", "Mon", "Thu", "Wed", "Thu", "Fri", "Sat"];
   return forecastWeekDay[forecastDay];
@@ -53,7 +53,7 @@ function forecastFormatDay(timestamp) {
 function displayforecast(response) {
   let forecast = response.data.daily;
   console.log(forecast);
- 
+
   let forecastElement = document.querySelector("#forecast");
   let forecastHtml = `<div class="row">`;
   forecast.forEach((forecast) => {
@@ -87,6 +87,7 @@ function showCurrentPosition() {
     axios.get(apiCurrentUrl).then(showTemp);
   }
 }
+
 function showTemp(response) {
   console.log(response.data);
   let cityName = document.querySelector(".city-name");
@@ -105,7 +106,6 @@ function showTemp(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-
   let feelsLike = document.querySelector("#feels-like");
   feelsLike.innerHTML = `${Math.round(
     response.data.temperature.feels_like
@@ -118,16 +118,10 @@ function showTemp(response) {
   getCoordinate(response.data.coordinates);
 }
 
-
-
-
-
 let submitButton = document.querySelector(".search-box");
 submitButton.addEventListener("submit", handleSubmit);
 
 let currentBtn = document.querySelector("#current-btn");
 currentBtn.addEventListener("click", showCurrentPosition);
-
-
 
 searchCity("paris");
