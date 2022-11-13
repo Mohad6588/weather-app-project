@@ -1,5 +1,5 @@
 function formatDate(time) {
-  let current = new Date(time);
+  let current = new Date(time * 1000);
   let currentDay = current.getDay();
   let weekdays = [
     "Sunday",
