@@ -113,7 +113,7 @@ function showTemp(response) {
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${Math.round(response.data.temperature.humidity)}%`;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
 
   getCoordinate(response.data.coordinates);
 }
