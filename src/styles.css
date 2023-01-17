@@ -151,7 +151,15 @@ a {
 }
 
 @media (max-width: 609px) {
-  .col-4 {
+  .current-location {
     margin-left: 2px;
   }
+  .forecast-icon {
+  width: 64px;
+}
+
+.forecast-date , .forecast-max-min {
+  font-size: 13px;
+}
+
 }
