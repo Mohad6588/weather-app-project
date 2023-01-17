@@ -59,7 +59,7 @@ function displayforecast(response) {
   forecast.forEach((forecast) => {
     forecastHtml =
       forecastHtml +
-      `<div class="forecast-date col-sm" >
+      `<div class="forecast-date col" >
           <div class="day">${forecastFormatDay(forecast.time)}</div>
           <img class="forecast-icon" width= "80px" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
             forecast.condition.icon

@@ -98,7 +98,7 @@ a {
 
 .form-control {
   display: inline;
-  width: 45%;
+  
   padding-right: 0;
   font-size: 14px;
   border: 1px solid rgb(230 230 230);
@@ -148,4 +148,9 @@ a {
 .forecast-max {
   color: #000;
   margin-left: 10px;
+}
+
+@media (max-width: 609px) {
+
+
 }

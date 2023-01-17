@@ -20,15 +20,27 @@
         <div class="row">
           <div class="col-8">
             <form class="search-box">
-              <input
-                type="text"
-                class="form-control city-value"
-                placeholder="Enter a city name"
-                required
-                autocomplete="off"
-              />
-              <input type="submit" value="Search" id="submit" />
-              <input type="button" value="Current location" id="current-btn" />
+              <div class="row">
+                <div class="col-5 pe-0">
+                  <input
+                    type="text"
+                    class="form-control city-value"
+                    placeholder="Enter a city name"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-2 ps-1 pe-0">
+                  <input type="submit" value="Search" id="submit" />
+                </div>
+                <div class="col-4 ps-2 pe-0">
+                  <input
+                    type="button"
+                    value="Current location"
+                    id="current-btn"
+                  />
+                </div>
+              </div>
             </form>
             <div class="city-Description">
               <h2 class="city-name"></h2>
@@ -37,8 +49,8 @@
               <p class="wheather-description"></p>
             </div>
           </div>
-          <div class="col-4">
-            <div class="row">
+          <div class="col-4 today-weather">
+            <div class="row temp-and-icon">
               <div class="col-8">
                 <div class="today-temperature">
                   <h1 class="current-temperature"></h1>
@@ -69,12 +81,20 @@
       </div>
       <footer>
         <small>
+          This project was coded by
+          <a href="https://symphonious-sunflower-8ca288.netlify.app/">
+            Mohadeseh Moradian</a
+          >
+          and is
           <a
             href="https://github.com/Mohad6588/weather-app-project"
             target="_blank"
-            >Open-source code</a
+            >open_sourced on GitHub</a
           >
-          by Mohadeseh Moradian <br />
+          and
+          <a href="https://superlative-boba-8dfa88.netlify.app"
+            >hosted on Netlify</a
+          >
         </small>
       </footer>
     </div>
